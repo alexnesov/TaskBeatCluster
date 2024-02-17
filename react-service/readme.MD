@@ -1,2 +1,2 @@
-- ```docker build -t react-frontend .```
-- ```docker run -d -p 80:80 react-frontend```
+- ```docker build -t react-service .```
+- ```docker run -d -p 3000:3000 react-service```
