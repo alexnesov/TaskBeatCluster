@@ -3,9 +3,10 @@ kind: Service
 metadata:
   name: react-service
 spec:
-  type: ClusterIP
+  type: NodePort
   ports:
-  - port: 80
-    targetPort: 80
+  - port: 80 # Use a port that's commonly accessible (e.g., 80 or 8080)
+    targetPort: 3000 # Assuming your React app is running on port 3000
+    nodePort: 32000 # Choose a port within the allowed range (30000-32767)
   selector:
     app: react-service

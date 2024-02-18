@@ -1,2 +1,2 @@
-- ```docker build -t fastapi-backend .```
-- ```docker run -d -p 8000:8000 fastapi-backend```
+- ```docker build -t fastapi-service .```
+- ```docker run -d -p 8000:8000 fastapi-service```

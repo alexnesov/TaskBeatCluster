@@ -3,9 +3,11 @@ kind: Service
 metadata:
   name: fastapi-service
 spec:
-  type: ClusterIP
-  ports:
-  - port: 80
-    targetPort: 80
   selector:
     app: fastapi-service
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8000
+      nodePort: 32001 # Choose a port within the allowed range (30000-32767)
+  type: NodePort
